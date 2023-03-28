@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "7b5b85cf-57c6-4e2b-b1c5-51d00d597d01",
+		"name": "Delivery",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Deliveries",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Show Delivery",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8001/api/deliveries/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"deliveries",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Delivery",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sourceKladr\" : \"Armenia\",\n    \"targetKladr\" : \"China\",\n    \"weight\" : 8,\n    \"weightUnit\": \"kg\",\n    \"service\" : {\n        \"deliveryService\" : \"fast\",\n        \"currency\": \"USD\",\n        \"price\": 56.25,\n        \"date\": \"2023-04-05\",\n        \"cost\": 200,\n        \"coefficient\" : 2.6,\n        \"period\": 6\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8001/api/deliveries",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"deliveries"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
